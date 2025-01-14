@@ -47,6 +47,7 @@ manuth.markdown-converter
 marlinfirmware.auto-build
 marvhen.reflow-markdown
 matthewpi.caddyfile-support
+mattyjones.vscode-rpmspec
 maximtrp.drone-ci
 mechatroner.rainbow-csv
 mhutchie.git-graph
