@@ -37,7 +37,6 @@ itzselenux.lm-theme
 jnoortheen.nix-ide
 joelcrosby.one-dark-darker
 jscearcy.rust-doc-viewer
-kisstkondoros.vscode-gutter-preview
 kokoscript.loopytheme
 l13rary.l13-diff
 lacroixdavid1.vscode-format-context-menu
@@ -121,6 +120,7 @@ vscjava.vscode-java-pack
 vscjava.vscode-java-test
 vscjava.vscode-maven
 vscodevim.vim
+wakatime.vscode-wakatime
 wayou.vscode-todo-highlight
 xaver.clang-format
 yinfei.luahelper
