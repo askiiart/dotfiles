@@ -33,11 +33,16 @@
 #back-button {
     display: none !important;
 }
+*/
 
 #forward-button {
     display: none !important;
 }
-*/
+
+#reload-button {
+    display: none !important;
+}
+
 /*#tracking-protection-icon-container {
     display: none !important;
 }*/
@@ -70,9 +75,11 @@
     display: none !important;
 }
 
+/*
 #PanelUI-button {
     display: none !important;
 }
+*/
 
 #nav-bar:not([tabs-hidden="true"]) {
     box-shadow: none !important;
