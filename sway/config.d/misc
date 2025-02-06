@@ -61,7 +61,9 @@ for_window [title="^Authentication Required$" app_id="lxqt-policykit-agent"] flo
 bindsym Scroll_Lock exec --no-startup-id $lockwall, mode "default"
 
 # Adjust screen brightness with keys
+bindsym XF86MonBrightnessUp exec "brightnessctl set 10%+"
 bindsym Mod4+Mod1+Up exec "brightnessctl set 10%+"
+bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
 bindsym Mod4+Mod1+Down exec "brightnessctl set 10%-"
 bindsym Mod4+Mod1+Shift+Up exec "brightnessctl set 1%+"
 bindsym Mod4+Mod1+Shift+Down exec "brightnessctl set 1%-"
