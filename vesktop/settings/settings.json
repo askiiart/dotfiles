@@ -68,7 +68,7 @@
             "file": true
         },
         "AnonymiseFileNames": {
-            "enabled": true,
+            "enabled": false,
             "anonymiseByDefault": true,
             "method": 0,
             "randomisedLength": 7
