@@ -120,7 +120,6 @@ vscjava.vscode-java-pack
 vscjava.vscode-java-test
 vscjava.vscode-maven
 vscodevim.vim
-wakatime.vscode-wakatime
 wayou.vscode-todo-highlight
 xaver.clang-format
 yinfei.luahelper
