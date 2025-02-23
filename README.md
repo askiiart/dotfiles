@@ -30,3 +30,10 @@ NOTE: Sway uses swayfx now, which has a bunch of effects
 
 - NOTE: `librewolf/prefs.js` MUST end in a newline for `read` to work
   - [userChrome.css stolen from aagaming](https://git.catvibers.me/aa/nix/src/commit/42c4ee8d52538ee5f53045a90f528072e12c097c/desktop/apps/web/userChrome.css)
+
+---
+
+TODO:
+
+- figure out how to script firefox/librewolf extension installation
+- maybe just rewrite it in rust or something entirely??? idk
