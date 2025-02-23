@@ -2,7 +2,7 @@
 
 # docker/podman stuff
 #alias docker="sudo docker"
-alias docker="podman"
+#alias docker="podman"
 alias dcompose="docker compose up -d --remove-orphans"
 alias ddu="docker compose down && dcompose"
 alias adb="sudo adb" # Needed on Fedora, not on Debian, IDK about other distros
