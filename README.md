@@ -7,7 +7,6 @@ My dotfiles for:
 - kitty
 - nvim
 - gpg
-- Vencord Desktop (Vesktop)
 - ~~sway~~ [SwayFX](https://github.com/WillPower3309/swayfx)
 - VS Code
 - Claws Mail
@@ -36,4 +35,5 @@ NOTE: Sway uses swayfx now, which has a bunch of effects
 TODO:
 
 - figure out how to script firefox/librewolf extension installation
+  - add vencord firefox
 - maybe just rewrite it in rust or something entirely??? idk
