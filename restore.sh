@@ -103,12 +103,7 @@ fi
 
 cd ~/.librewolf
 for dir in $(find . -mindepth 1 -maxdepth 1 -type d -name "*.*"); do
-    cp -r $GIT_DIR/librewolf/!(prefs.js) $dir
-    while read line; do
-        if ! grep -q "$line" $dir/prefs.js; then
-            echo "$line" | tee -a $dir/prefs.js
-        fi
-    done <$GIT_DIR/librewolf/prefs.js
+    cp -r $GIT_DIR/librewolf/ $dir
 done
 
 # WezTerm
