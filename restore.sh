@@ -126,6 +126,8 @@ elif command_exists "code-oss"; then
     code-oss $(for ext in $(cat $GIT_DIR/vscode/extensions.txt); do echo -n "--install-extension $ext "; done)
     cp $GIT_DIR/vscode/argv.json $HOME/.vscode-oss/argv.json
 fi
+# VS code: run in wayland natively
+sudo sed '/^Exec=\/usr\/share\/code\/code\( --new-window\)\? %F$/ s/$/ --enable-features=UseOzonePlatform --ozone-platform=wayland/' -i /usr/share/applications/code.desktop
 
 echo "restore.sh done!"
 

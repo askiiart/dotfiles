@@ -37,3 +37,4 @@ TODO:
 - figure out how to script firefox/librewolf extension installation
   - add vencord firefox
 - maybe just rewrite it in rust or something entirely??? idk
+- fix swaylock background generation
