@@ -79,11 +79,9 @@ mkdir -p $HOME/.config/fontconfig/conf.d/
 cp -r $GIT_DIR/fontconfig/* $HOME/.config/fontconfig/conf.d/
 
 # waybar
-if ! command_exists "dnf"; then
-    rm -rf $HOME/.config/waybar/
-    mkdir $HOME/.config/waybar/
-    cp -r $GIT_DIR/waybar/* $HOME/.config/waybar/
-fi
+rm -rf $HOME/.config/waybar/
+mkdir $HOME/.config/waybar/
+cp -r $GIT_DIR/waybar/* $HOME/.config/waybar/
 
 # sway-runner
 # TODO: make this work on nix too
