@@ -68,12 +68,18 @@ bindsym Mod4+Mod1+Down exec "brightnessctl set 10%-"
 bindsym Mod4+Mod1+Shift+Up exec "brightnessctl set 1%+"
 bindsym Mod4+Mod1+Shift+Down exec "brightnessctl set 1%-"
 
-# Adjust volume with keys
+# media control keys
+# volume
 bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
 bindsym Mod4+Mod1+Right exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
 bindsym Mod4+Mod1+Left exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+# play/pause, back/forward
+bindsym XF86AudioPlay exec "playerctl play-pause"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPrev exec "playerctl previous"
+# TODO: Add thing to switch between players - maybe to fast forward/rewind as well?
 
 # pipewire
 exec "command_exists() { type '$1' &>/dev/null; }; if command_exists 'xbps-install'; then pipewire; fi"

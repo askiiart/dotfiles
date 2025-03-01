@@ -6,4 +6,7 @@ workspace right output "Hewlett Packard HP ZR22w CN41250H24"
 output "Hewlett Packard HP ZR22w CN41250FHX" transform 270 position -1080,-40
 workspace left output "Hewlett Packard HP ZR22w CN41250FHX"
 
+# framework 13
+output "BOE 0x0BCA Unknown" scale 1.3
+
 output * bg ~/.config/sway/backgrounds/logo.png center #1E1E2E

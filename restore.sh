@@ -31,10 +31,6 @@ rm -f $HOME/.gnupg/gpg.conf
 mkdir $HOME/.gnupg
 cp -r $GIT_DIR/gnupg/* $HOME/.gnupg/
 
-# vesktop
-mkdir $HOME/.config/vesktop
-cp -r $GIT_DIR/vesktop/* $HOME/.config/vesktop/
-
 # i3
 rm -rf $HOME/.config/i3
 cp -r $GIT_DIR/i3 $HOME/.config/
@@ -83,11 +79,9 @@ mkdir -p $HOME/.config/fontconfig/conf.d/
 cp -r $GIT_DIR/fontconfig/* $HOME/.config/fontconfig/conf.d/
 
 # waybar
-if ! command_exists "dnf"; then
-    rm -rf $HOME/.config/waybar/
-    mkdir $HOME/.config/waybar/
-    cp -r $GIT_DIR/waybar/* $HOME/.config/waybar/
-fi
+rm -rf $HOME/.config/waybar/
+mkdir $HOME/.config/waybar/
+cp -r $GIT_DIR/waybar/* $HOME/.config/waybar/
 
 # sway-runner
 # TODO: make this work on nix too
@@ -107,12 +101,7 @@ fi
 
 cd ~/.librewolf
 for dir in $(find . -mindepth 1 -maxdepth 1 -type d -name "*.*"); do
-    cp -r $GIT_DIR/librewolf/!(prefs.js) $dir
-    while read line; do
-        if ! grep -q "$line" $dir/prefs.js; then
-            echo "$line" | tee -a $dir/prefs.js
-        fi
-    done <$GIT_DIR/librewolf/prefs.js
+    cp -r $GIT_DIR/librewolf/ $dir
 done
 
 # WezTerm
@@ -135,6 +124,8 @@ elif command_exists "code-oss"; then
     code-oss $(for ext in $(cat $GIT_DIR/vscode/extensions.txt); do echo -n "--install-extension $ext "; done)
     cp $GIT_DIR/vscode/argv.json $HOME/.vscode-oss/argv.json
 fi
+# VS code: run in wayland natively
+sudo sed '/^Exec=\/usr\/share\/code\/code\( --new-window\)\? %F$/ s/$/ --enable-features=UseOzonePlatform --ozone-platform=wayland/' -i /usr/share/applications/code.desktop
 
 echo "restore.sh done!"
 
