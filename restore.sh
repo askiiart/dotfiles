@@ -31,6 +31,10 @@ rm -f $HOME/.gnupg/gpg.conf
 mkdir $HOME/.gnupg
 cp -r $GIT_DIR/gnupg/* $HOME/.gnupg/
 
+# vesktop
+mkdir $HOME/.config/vesktop
+cp -r $GIT_DIR/vesktop/* $HOME/.config/vesktop/
+
 # i3
 rm -rf $HOME/.config/i3
 cp -r $GIT_DIR/i3 $HOME/.config/

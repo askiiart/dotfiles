@@ -26,6 +26,16 @@ mkdir $GIT_DIR/gnupg
 cp $HOME/.gnupg/gpg.conf $GIT_DIR/gnupg/
 cp $HOME/.gnupg/gpg-agent.conf $GIT_DIR/gnupg/
 
+# Vesktop
+rm -rf $GIT_DIR/vesktop
+cp -r $HOME/.config/vesktop/ $GIT_DIR
+rm -rf $GIT_DIR/vesktop/sessionData
+rm -rf $GIT_DIR/vesktop/Crashpad
+rm -rf $GIT_DIR/vesktop/vencordDist
+rm -f $GIT_DIR/vesktop/Singleton*
+rm -f $GIT_DIR/vesktop/state.json
+rm -f $GIT_DIR/vesktop/.updaterId
+
 # VS code
 rm -rf $GIT_DIR/vscode
 mkdir $GIT_DIR/vscode
