@@ -18,7 +18,6 @@ davidanson.vscode-markdownlint
 diegomolina.css-minify
 dustypomerleau.rust-syntax
 dzhavat.git-cheatsheet
-equinusocio.vsc-material-theme-icons
 eserozvataf.one-dark-pro-monokai-darker
 felipecaputo.git-project-manager
 fill-labs.dependi
