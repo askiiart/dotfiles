@@ -18,7 +18,7 @@ alias pls="please"
 
 if status is-interactive
     # kitty stuff
-    if [ $TERM = "xterm-kitty" ]
+    if [ $TERM = xterm-kitty ]
         alias icat="kitten icat"
         alias s="kitten ssh"
     else
@@ -26,7 +26,7 @@ if status is-interactive
         alias s="ssh"
     end
 
-# NixOS
+    # NixOS
     if type -q nixos-rebuild
         alias nrs="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all"
         alias nrb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all"
@@ -62,3 +62,6 @@ alias venv="if ! test -d ./.venv/; python3 -m venv .venv; end; source ./.venv/bi
 alias py-dep="pip install -r requirements.txt"
 
 alias sway="sway --unsupported-gpu"
+if [ $(tty) = /dev/tty1 ]
+    sway
+end
