@@ -101,7 +101,7 @@ fi
 
 cd ~/.librewolf
 for dir in $(find . -mindepth 1 -maxdepth 1 -type d -name "*.*"); do
-    cp -r $GIT_DIR/librewolf/ $dir
+    cp -r $GIT_DIR/librewolf/* $dir
 done
 
 # WezTerm
