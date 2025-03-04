@@ -129,7 +129,7 @@ elif command_exists "code-oss"; then
     cp $GIT_DIR/vscode/argv.json $HOME/.vscode-oss/argv.json
 fi
 # VS code: run in wayland natively
-sudo sed '/^Exec=\/usr\/share\/code\/code\( --new-window\)\? %F$/ s/$/ --enable-features=UseOzonePlatform --ozone-platform=wayland/' -i /usr/share/applications/code.desktop
+sudo sed '/^Exec=\/usr\/share\/code\/code\( --new-window\)\? %F$/ s/$/ --ozone-platform=wayland/' -i /usr/share/applications/code.desktop
 
 echo "restore.sh done!"
 

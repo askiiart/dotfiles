@@ -68,4 +68,4 @@ end
 
 # run code in wayland natively
 # TODO: just add it to the args file instead
-alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias code="code --ozone-platform=wayland"
