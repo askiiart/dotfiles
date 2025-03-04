@@ -131,7 +131,10 @@ fi
 # VS code: run in wayland natively
 sudo sed '/^Exec=\/usr\/share\/code\/code\( --new-window\)\? %F$/ s/$/ --ozone-platform=wayland/' -i /usr/share/applications/code.desktop
 
-echo "restore.sh done!"
+# Vesktop: run in wayland natively
+sudo sed '/^Exec=\/opt\/Vesktop\/vesktop %U$/ s/$/ --ozone-platform=wayland/' -i /usr/share/applications/vesktop.desktop
 
 # default applications
 xdg-settings set default-web-browser librewolf.desktop
+
+echo "restore.sh done!"

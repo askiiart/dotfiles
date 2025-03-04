@@ -69,3 +69,4 @@ end
 # run code in wayland natively
 # TODO: just add it to the args file instead
 alias code="code --ozone-platform=wayland"
+alias vesktop="vesktop --ozone-platform=wayland"
