@@ -54,4 +54,6 @@ config.colors = {
 
 config.default_cursor_style = 'SteadyBar'
 
+config.enable_wayland = true
+
 return config
