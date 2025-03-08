@@ -125,5 +125,8 @@
     "yaml.format.singleQuote": true,
     "evenBetterToml.formatter.indentEntries": false,
     "evenBetterToml.formatter.indentTables": true,
-    "evenBetterToml.formatter.indentString": "  "
+    "evenBetterToml.formatter.indentString": "  ",
+    "window.menuBarVisibility": "hidden",
+    "window.titleBarStyle": "native",
+    "window.customTitleBarVisibility": "never"
 }
