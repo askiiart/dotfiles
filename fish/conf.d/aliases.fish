@@ -62,7 +62,11 @@ alias venv="if ! test -d ./.venv/; python3 -m venv .venv; end; source ./.venv/bi
 alias py-dep="pip install -r requirements.txt"
 
 alias sway="sway --unsupported-gpu"
+if [ $(tty) = /dev/tty1 ]
+    sway
+end
 
 # run code in wayland natively
 # TODO: just add it to the args file instead
-alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias code="code --ozone-platform=wayland"
+alias vesktop="vesktop --ozone-platform=wayland"
