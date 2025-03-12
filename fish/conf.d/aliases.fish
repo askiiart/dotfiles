@@ -66,7 +66,17 @@ if [ $(tty) = /dev/tty1 ]
     sway
 end
 
-# run code in wayland natively
-# TODO: just add it to the args file instead
+# run code and vesktop in wayland natively
+# TODO: just add it to the args file instead(?)
 alias code="code --ozone-platform=wayland"
 alias vesktop="vesktop --ozone-platform=wayland"
+
+function dwarfs-overlay -a dwarfs_image
+    set working_dir $(dirname $dwarfs_image)
+    set without_ext $(basename $dwarfs_image ".dwarfs")
+    mkdir -p $working_dir/$without_ext
+    mkdir -p $working_dir/.$without_ext
+    mkdir -p $working_dir/.$without_ext/{ro,rw,workdir}
+    dwarfs $dwarfs_image $working_dir/.$without_ext/ro -o allow_root
+    sudo mount -t overlay overlay -o lowerdir=$working_dir/.$without_ext/ro,upperdir=$working_dir/.$without_ext/rw,workdir=$working_dir/.$without_ext/workdir $working_dir/$without_ext
+end
