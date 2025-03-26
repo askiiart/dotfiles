@@ -84,7 +84,9 @@ bindsym XF86AudioPrev exec "playerctl previous"
 # pipewire
 exec "command_exists() { type '$1' &>/dev/null; }; if command_exists 'xbps-install'; then pipewire; fi"
 
+# misc daemon stuff
 exec "kanshi"
+exec "wluma"
 
 # adjust PPD settings on framework 13
 bindsym XF86AudioMedia exec "if powerprofilesctl get | grep -q 'power-saver' ; then powerprofilesctl set 'balanced' && notify-send 'PPD set to balanced'; else powerprofilesctl set 'power-saver' && notify-send 'PPD set to power-saver'; fi"
