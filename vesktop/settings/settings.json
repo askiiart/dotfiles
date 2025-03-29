@@ -2,13 +2,13 @@
     "notifyAboutUpdates": true,
     "autoUpdate": true,
     "autoUpdateNotification": true,
-    "useQuickCss": true,
+    "useQuickCss": false,
     "themeLinks": [],
     "enabledThemes": [
         "discolored.theme.css",
         "Material-Discord.theme.css",
         "SettingsModal.theme.css",
-        "Nord.theme.css"
+        "mocha.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -185,9 +185,6 @@
         "GreetStickerPicker": {
             "enabled": true
         },
-        "HideAttachments": {
-            "enabled": false
-        },
         "iLoveSpam": {
             "enabled": false
         },
@@ -361,8 +358,13 @@
         },
         "PinDMs": {
             "enabled": true,
-            "dmSectioncollapsed": false,
-            "pinOrder": 0
+            "pinOrder": 0,
+            "dmSectionCollapsed": false,
+            "canCollapseDmSection": false,
+            "userBasedCategoryList": {
+                "1025553250440720474": [],
+                "552658564368302092": []
+            }
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -730,6 +732,12 @@
         },
         "FullUserInChatbox": {
             "enabled": false
+        },
+        "HideMedia": {
+            "enabled": false
+        },
+        "IrcColors": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -742,6 +750,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1736978258906
-    }
+        "settingsSyncVersion": 1742950782065
+    },
+    "eagerPatches": false
 }
