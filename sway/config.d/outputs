@@ -10,3 +10,6 @@ workspace left output "Hewlett Packard HP ZR22w CN41250FHX"
 output "BOE 0x0BCA Unknown" scale 1.3
 
 output * bg ~/.config/sway/backgrounds/logo.png center #1E1E2E
+
+# bedroom tv
+workspace tv output "Hitachi Ltd 50R5 0x01010101"
