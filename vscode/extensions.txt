@@ -16,6 +16,7 @@ ctenbrinke.vscode-tsv
 danielpinto8zz6.c-cpp-compile-run
 davidanson.vscode-markdownlint
 diegomolina.css-minify
+docker.docker
 dustypomerleau.rust-syntax
 dzhavat.git-cheatsheet
 eserozvataf.one-dark-pro-monokai-darker
@@ -119,6 +120,7 @@ vscjava.vscode-java-pack
 vscjava.vscode-java-test
 vscjava.vscode-maven
 vscodevim.vim
+wakatime.vscode-wakatime
 wayou.vscode-todo-highlight
 xaver.clang-format
 yinfei.luahelper
