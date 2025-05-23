@@ -31,10 +31,6 @@ rm -f $HOME/.gnupg/gpg.conf
 mkdir $HOME/.gnupg
 cp -r $GIT_DIR/gnupg/* $HOME/.gnupg/
 
-# vesktop
-mkdir $HOME/.config/vesktop
-cp -r $GIT_DIR/vesktop/* $HOME/.config/vesktop/
-
 # i3
 rm -rf $HOME/.config/i3
 cp -r $GIT_DIR/i3 $HOME/.config/
@@ -130,9 +126,6 @@ elif command_exists "code-oss"; then
 fi
 # VS code: run in wayland natively
 sudo sed '/^Exec=\/usr\/share\/code\/code\( --new-window\)\? %F$/ s/$/ --ozone-platform=wayland/' -i /usr/share/applications/code.desktop
-
-# Vesktop: run in wayland natively
-sudo sed '/^Exec=\/opt\/Vesktop\/vesktop %U$/ s/$/ --ozone-platform=wayland/' -i /usr/share/applications/vesktop.desktop
 
 # default applications
 xdg-settings set default-web-browser librewolf.desktop

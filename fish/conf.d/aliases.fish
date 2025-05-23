@@ -66,10 +66,9 @@ if [ $(tty) = /dev/tty1 ]
     sway
 end
 
-# run code and vesktop in wayland natively
+# run code in wayland natively
 # TODO: just add it to the args file instead(?)
 alias code="code --ozone-platform=wayland"
-alias vesktop="vesktop --ozone-platform=wayland"
 
 function dwarfs-overlay -a dwarfs_image
     set working_dir $(dirname $dwarfs_image)

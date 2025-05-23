@@ -7,7 +7,6 @@ My dotfiles for:
 - kitty
 - nvim
 - gpg
-- Vencord Desktop (Vesktop)
 - ~~sway~~ [SwayFX](https://github.com/WillPower3309/swayfx)
 - VS Code
 - Claws Mail
