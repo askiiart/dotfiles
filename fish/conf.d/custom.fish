@@ -11,7 +11,8 @@ if status is-interactive
     # ctrl+backspace (^H in kitty)
     # for ctrl+delete: kill-word ([3;5~ in kitty)
     bind \cH backward-kill-path-component
-    bind '[3;5~' kill-word
+    # unused now ig?
+    # bind '[3;5~' kill-word
     set -x NIXPKGS_ALLOW_UNFREE 1
     set -x NIXPKGS_ALLOW_INSECURE 1
     set -x GTK_THEME Catppuccin-Mocha-Standard-Mauve-Dark

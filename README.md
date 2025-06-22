@@ -36,4 +36,4 @@ TODO:
 
 - figure out how to script firefox/librewolf extension installation
 - maybe just rewrite it in rust or something entirely??? idk
-- fix swaylock background generation
+- swaylock background configuration

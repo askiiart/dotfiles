@@ -19,6 +19,7 @@ diegomolina.css-minify
 docker.docker
 dustypomerleau.rust-syntax
 dzhavat.git-cheatsheet
+editorconfig.editorconfig
 eserozvataf.one-dark-pro-monokai-darker
 felipecaputo.git-project-manager
 fill-labs.dependi
@@ -42,7 +43,6 @@ kokoscript.loopytheme
 l13rary.l13-diff
 lacroixdavid1.vscode-format-context-menu
 laurenclark.sappho
-lorettadevs.loretta-lua
 manuth.markdown-converter
 marlinfirmware.auto-build
 marvhen.reflow-markdown
@@ -50,7 +50,9 @@ matthewpi.caddyfile-support
 mattyjones.vscode-rpmspec
 mechatroner.rainbow-csv
 mhutchie.git-graph
+mkhl.shfmt
 mohd-akram.vscode-html-format
+ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-mssql.data-workspace-vscode
 ms-mssql.mssql
