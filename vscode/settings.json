@@ -128,5 +128,8 @@
     "evenBetterToml.formatter.indentString": "  ",
     "window.menuBarVisibility": "hidden",
     "window.titleBarStyle": "native",
-    "window.customTitleBarVisibility": "never"
+    "window.customTitleBarVisibility": "never",
+    "[shellscript]": {
+        "editor.defaultFormatter": "mkhl.shfmt"
+    }
 }
