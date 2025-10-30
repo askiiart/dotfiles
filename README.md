@@ -7,7 +7,7 @@ My dotfiles for:
 - kitty
 - nvim
 - gpg
-- ~~sway~~ [SwayFX](https://github.com/WillPower3309/swayfx)
+- sway
 - VS Code
 - Claws Mail
 - Rofi

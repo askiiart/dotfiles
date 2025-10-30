@@ -3,7 +3,7 @@ output "Acer Technologies EK271U E 14160766B3W01" mode 2560x1440@100hz adaptive_
 output "Hewlett Packard HP ZR22w CN41250H24" transform 270 position 2560,0
 workspace right output "Hewlett Packard HP ZR22w CN41250H24"
 
-output "Hewlett Packard HP ZR22w CN41250FHX" transform 270 position -1080,-40
+output "Hewlett Packard HP ZR22w CN41250FHX" transform 0 position 2560,875
 workspace left output "Hewlett Packard HP ZR22w CN41250FHX"
 
 # framework 13
@@ -13,3 +13,9 @@ output * bg ~/.config/sway/backgrounds/logo.png center #1E1E2E
 
 # bedroom tv
 workspace tv output "Hitachi Ltd 50R5 0x01010101"
+bindsym --locked Mod4+Shift+o output "Acer Technologies EK271U E 14160766B3W01" toggle
+
+# drawing tablet
+workspace ~ output "VKK VK1160C 20241118"
+input "12267:4101:VEIKK.INC_VK1200" map_to_output "VKK VK1160C 20241118"
+

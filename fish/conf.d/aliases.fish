@@ -15,6 +15,8 @@ alias la="ls -a"
 alias please="sudo"
 alias pwease="please"
 alias pls="please"
+alias progesterone="progress"
+alias prog="progesterone"
 
 if status is-interactive
     # kitty stuff

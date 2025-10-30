@@ -18,7 +18,7 @@ set $term wezterm-gui
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show drun | xargs swaymsg exec --
+set $menu rofi -show-icons -show drun | xargs swaymsg exec --
 
 ##### Custom stuff #####
 for_window [window_role="pop-up"] floating enable
@@ -137,6 +137,7 @@ exec waybar
 # Workspaces:
 #
     # Switch to workspace
+    bindsym $mod+Grave workspace ~
     bindsym $mod+1 exec "~/.config/sway/switch-workspace.sh 1"
     bindsym $mod+2 exec "~/.config/sway/switch-workspace.sh 2"
     bindsym $mod+3 exec "~/.config/sway/switch-workspace.sh 3"
@@ -150,6 +151,7 @@ exec waybar
     bindsym $mod+equal workspace right
     bindsym $mod+minus workspace left
     # Move focused container to workspace
+    bindsym $mod+Shift+Grave move container to workspace ~
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
