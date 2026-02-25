@@ -112,6 +112,10 @@ gsettings set org.cinnamon.desktop.default-applications.terminal exec wezterm-gu
 # Git config
 cp $GIT_DIR/gitconfig ~/.gitconfig
 
+# wayfire
+rm -rf $XDG_CONFIG_HOME/wayfire
+cp -r $GIT_DIR/wayfire $XDG_CONFIG_HOME
+
 # VS code
 mkdir -p $HOME/.config/Code/User/
 mkdir -p $HOME/.vscode/

@@ -101,3 +101,7 @@ cp ~/.wezterm.lua $GIT_DIR/wezterm.lua
 
 # Git config
 cp ~/.gitconfig $GIT_DIR/gitconfig
+
+# wayfire
+rm -rf $GIT_DIR/wayfire
+cp -r $XDG_CONFIG_HOME/wayfire/ .
