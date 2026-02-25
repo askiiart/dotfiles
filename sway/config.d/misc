@@ -92,3 +92,8 @@ bindsym Mod4+Alt+XF86AudioMedia exec "pkill -9 wluma; wluma"
 # adjust PPD settings on framework 13
 bindsym XF86AudioMedia exec "if powerprofilesctl get | grep -q 'power-saver' ; then powerprofilesctl set 'balanced' && notify-send 'PPD set to balanced'; else powerprofilesctl set 'power-saver' && notify-send 'PPD set to power-saver'; fi"
 bindsym Alt+XF86AudioMedia exec "powerprofilesctl set 'performance' && notify-send 'PPD set to performance'"
+
+# cursor settings
+seat seat0 xcursor_theme miku-cursor-linux 40
+
+primary_selection disabled
