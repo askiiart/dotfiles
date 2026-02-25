@@ -131,5 +131,15 @@
     "window.customTitleBarVisibility": "never",
     "[shellscript]": {
         "editor.defaultFormatter": "mkhl.shfmt"
-    }
+    },
+    "xml.server.vmargs": "-Xmx128M",
+    "editor.maxTokenizationLineLength": 200000,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.viewTitle.enabled": false,
+    "chat.agent.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "inlineChat.accessibleDiffView": "off",
+    "terminal.integrated.initialHint": false,
+    "makefile.configureOnOpen": true,
+    "chat.viewWelcome.enabled": false
 }
