@@ -5,7 +5,7 @@ command_exists() { type "$1" &>/dev/null; }
 
 # fish
 rm -rf $GIT_DIR/fish
-cp -r $HOME/.config/fish/ $GIT_DIR
+cp -r $XDG_CONFIG_HOME/fish/ $GIT_DIR
 if command_exists "nixos-rebuild"; then
     rm $GIT_DIR/fish/config.fish
     mv $GIT_DIR/fish/config.fish.backup $GIT_DIR/fish/config.fish
@@ -13,12 +13,12 @@ fi
 
 # kitty
 rm -rf $GIT_DIR/kitty
-cp -r $HOME/.config/kitty/ $GIT_DIR
-cp -r $HOME/.config/nvim/ $GIT_DIR
+cp -r $XDG_CONFIG_HOME/kitty/ $GIT_DIR
+cp -r $XDG_CONFIG_HOME/nvim/ $GIT_DIR
 
 # nvim
 rm -rf $GIT_DIR/nvim
-cp -r $HOME/.config/nvim/ $GIT_DIR
+cp -r $XDG_CONFIG_HOME/nvim/ $GIT_DIR
 
 # gpg
 rm -rf $GIT_DIR/gnupg
@@ -31,23 +31,23 @@ rm -rf $GIT_DIR/vscode
 mkdir $GIT_DIR/vscode
 if command_exists "code"; then
     code --list-extensions >$GIT_DIR/vscode/extensions.txt
-    cp $HOME/.config/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
-    cp $HOME/.config/Code/User/settings.json $GIT_DIR/vscode/settings.json
+    cp $XDG_CONFIG_HOME/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
+    cp $XDG_CONFIG_HOME/Code/User/settings.json $GIT_DIR/vscode/settings.json
     cp $HOME/.vscode/argv.json $GIT_DIR/vscode/argv.json
 elif command_exists "code-oss"; then
     code-oss --list-extensions >$GIT_DIR/vscode/extensions.txt
-    cp $HOME/.config/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
-    cp $HOME/.config/Code/User/settings.json $GIT_DIR/vscode/settings.json
+    cp $XDG_CONFIG_HOME/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
+    cp $XDG_CONFIG_HOME/Code/User/settings.json $GIT_DIR/vscode/settings.json
     cp $HOME/.vscode-oss/argv.json $GIT_DIR/vscode/argv.json
 fi
 
 # i3
 rm -rf $GIT_DIR/i3
-cp -r $HOME/.config/i3/ .
+cp -r $XDG_CONFIG_HOME/i3/ .
 
 # sway
 rm -rf $GIT_DIR/sway
-cp -r $HOME/.config/sway/ .
+cp -r $XDG_CONFIG_HOME/sway/ .
 outputs=$(swaymsg -t get_outputs)
 width=$(echo $outputs | jq -r .[0].modes.[0].width)
 height=$(echo $outputs | jq -r .[0].modes.[0].height)
@@ -75,18 +75,18 @@ fi
 
 # rofi
 rm -rf $GIT_DIR/rofi/
-cp -r $HOME/.config/rofi/ $GIT_DIR/rofi/
+cp -r $XDG_CONFIG_HOME/rofi/ $GIT_DIR/rofi/
 
 # fontconfig
 rm -rf $GIT_DIR/fontconfig
 mkdir $GIT_DIR/fontconfig
-cp -r $HOME/.config/fontconfig/conf.d/* $GIT_DIR/fontconfig/
+cp -r $XDG_CONFIG_HOME/fontconfig/conf.d/* $GIT_DIR/fontconfig/
 
 # waybar
 if ! command_exists "dnf"; then
     rm -rf $GIT_DIR/waybar/
     mkdir $GIT_DIR/waybar/
-    cp -r $HOME/.config/waybar/* $GIT_DIR/waybar/
+    cp -r $XDG_CONFIG_HOME/waybar/* $GIT_DIR/waybar/
 fi
 
 # sway runner
