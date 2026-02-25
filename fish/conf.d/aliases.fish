@@ -79,5 +79,14 @@ function dwarfs-overlay -a dwarfs_image
     mkdir -p $working_dir/.$without_ext
     mkdir -p $working_dir/.$without_ext/{ro,rw,workdir}
     dwarfs $dwarfs_image $working_dir/.$without_ext/ro -o allow_root
-    sudo mount -t overlay overlay -o lowerdir=$working_dir/.$without_ext/ro,upperdir=$working_dir/.$without_ext/rw,workdir=$working_dir/.$without_ext/workdir $working_dir/$without_ext
+    fuse-overlayfs -o lowerdir=$working_dir/.$without_ext/ro,upperdir=$working_dir/.$without_ext/rw,workdir=$working_dir/.$without_ext/workdir $working_dir/$without_ext
+end
+
+function dwarfs-here -a dwarfs_image mount_path
+    set working_dir "$(dirname "$mount_path")"
+    set name "$(basename "$mount_path")"
+    mkdir -p "$mount_path"
+    mkdir -p "$working_dir/.$name/"{ro,rw,workdir}
+    dwarfs "$dwarfs_image" "$working_dir/.$name/ro" -o allow_root
+    fuse-overlayfs -o "lowerdir=$working_dir/.$name/ro,upperdir=$working_dir/.$name/rw,workdir=$working_dir/.$name/workdir" "$working_dir/$name"
 end
