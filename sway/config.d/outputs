@@ -1,15 +1,15 @@
-output "Acer Technologies EK271U E 14160766B3W01" mode 2560x1440@100hz adaptive_sync on position 0,480
+output "Acer Technologies EK271U E 14160766B3W01" mode 2560x1440@100hz adaptive_sync off position 0,0
 
-output "Hewlett Packard HP ZR22w CN41250H24" transform 270 position 2560,0
-workspace right output "Hewlett Packard HP ZR22w CN41250H24"
+output "Hewlett Packard HP ZR22w CN41250H24" transform 0 position -1920,395
+workspace left output "Hewlett Packard HP ZR22w CN41250H24"
 
-output "Hewlett Packard HP ZR22w CN41250FHX" transform 0 position 2560,875
-workspace left output "Hewlett Packard HP ZR22w CN41250FHX"
+output "Hewlett Packard HP ZR22w CN41250FHX" transform 0 position 2560,395
+workspace right output "Hewlett Packard HP ZR22w CN41250FHX"
 
 # framework 13
 output "BOE 0x0BCA Unknown" scale 1.3
 
-output * bg ~/.config/sway/backgrounds/logo.png center #1E1E2E
+output * bg ~/Pictures/default.jxl fill #1E1E2E
 
 # bedroom tv
 workspace tv output "Hitachi Ltd 50R5 0x01010101"
@@ -19,3 +19,5 @@ bindsym --locked Mod4+Shift+o output "Acer Technologies EK271U E 14160766B3W01" 
 workspace ~ output "VKK VK1160C 20241118"
 input "12267:4101:VEIKK.INC_VK1200" map_to_output "VKK VK1160C 20241118"
 
+output "HP Inc. HP E243 CNK93926J4" transform 0 position 2560,395
+workspace right output "HP Inc. HP E243 CNK93926J4"
