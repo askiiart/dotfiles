@@ -3,7 +3,7 @@
 	email = dev@askiiart.net
 	signingKey = 4BA41BD58C088A98622B9A1A7939D59EC80C3C21
 [commit]
-	gpgsign = true
+	gpgsign = false
 [init]
 	defaultbranch = main
 [alias]
