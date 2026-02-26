@@ -14,6 +14,7 @@ if command_exists "nixos-rebuild"; then
 else
     cp -r $GIT_DIR/fish/ $XDG_CONFIG_HOME/
 fi
+fish -c 'fisher install plttn/tide@v7'
 fish -c 'fisher update'
 fish -c "tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Dark --show_time='24-hour format' --classic_prompt_separators=Vertical --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='One line' --prompt_spacing=Compact --icons='Many icons' --transient=No"
 
@@ -80,8 +81,7 @@ cp -r $GIT_DIR/fontconfig/* $XDG_CONFIG_HOME/fontconfig/conf.d/
 
 # waybar
 rm -rf $XDG_CONFIG_HOME/waybar/
-mkdir $XDG_CONFIG_HOME/waybar/
-cp -r $GIT_DIR/waybar/* $XDG_CONFIG_HOME/waybar/
+cp -r $GIT_DIR/waybar/ $XDG_CONFIG_HOME/
 
 # sway-runner
 # TODO: make this work on nix too

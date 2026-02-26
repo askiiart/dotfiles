@@ -83,11 +83,8 @@ mkdir $GIT_DIR/fontconfig
 cp -r $XDG_CONFIG_HOME/fontconfig/conf.d/* $GIT_DIR/fontconfig/
 
 # waybar
-if ! command_exists "dnf"; then
-    rm -rf $GIT_DIR/waybar/
-    mkdir $GIT_DIR/waybar/
-    cp -r $XDG_CONFIG_HOME/waybar/* $GIT_DIR/waybar/
-fi
+rm -rf $GIT_DIR/waybar/
+cp -r $XDG_CONFIG_HOME/waybar/ $GIT_DIR/
 
 # sway runner
 # TODO: make this work on nix stuff
